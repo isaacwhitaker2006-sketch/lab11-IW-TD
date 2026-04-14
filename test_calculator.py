@@ -1,10 +1,10 @@
 # https://github.com/isaacwhitaker2006-sketch/lab11-IW-TD/edit/main/test_calculator.py
+#https://github.com/isaacwhitaker2006-sketch/lab11-IW-TD/edit/main/test_calculator.py
 import unittest
 from calculator import *
 
-
-# Partner 1: Issac Whitaker
-# Partner 2: Trent Diano
+#Partner 1: Issac Whitaker
+#Partner 2: Trent Diano
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
@@ -17,6 +17,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(subtract(10, 2), 8)
         self.assertEqual(subtract(0, 5), -5)
         self.assertEqual(subtract(-2, -2), 0)
+
 
     ######## Partner 1
     def test_multiply(self):  # 3 assertions
@@ -55,16 +56,15 @@ class TestCalculator(unittest.TestCase):
             logarithm(10, 0)
         self.assertEqual(logarithm(10, 1), 0)
 
-    def test_hypotenuse(self):  # 3 assertions
+    def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
 
-    def test_sqrt(self):  # 3 assertions
-        with self.assertRaises(ValueError):  # expects ValueError
+    def test_sqrt(self): # 3 assertions
+        with self.assertRaises(ValueError):     # expects ValueError
             square_root(-1)
         self.assertEqual(square_root(1), 1)
         self.assertEqual(square_root(4), 2)
     ##########################
-
 
 # Do not touch this
 if __name__ == "__main__":
