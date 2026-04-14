@@ -1,5 +1,6 @@
-import math
 #https://github.com/isaacwhitaker2006-sketch/lab11-IW-TD/edit/main/calculator.py
+import math
+
 # Partner 1: Isaac Whitaker
 # Partner 2: Trent Diano
 
@@ -19,9 +20,9 @@ def hypotenuse(a, b):
 
 def add(a, b):
     return a + b
-def sub(a, b):
+def subtract(a, b):
     return a - b
-def multiply(a, b):
+def mul(a, b):
     return a * b
 def divide(a, b):
     if b == 0:
