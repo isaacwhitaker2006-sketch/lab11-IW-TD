@@ -1,6 +1,7 @@
+#https://github.com/isaacwhitaker2006-sketch/lab11-IW-TD/edit/main/test_calculator.py
 import unittest
 from calculator import *
-#https://github.com/isaacwhitaker2006-sketch/lab11-IW-TD/edit/main/test_calculator.py
+
 #Partner 1: Issac Whitaker
 #Partner 2: Trent Diano
 
@@ -19,21 +20,20 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
-        self.assertEqual(multiply(2, 2), 4)
-        self.assertEqual(multiply(0, 2), 0)
-        self.assertEqual(multiply(-2, 2), -4)
+        self.assertEqual(mul(2, 2), 4)
+        self.assertEqual(mul(0, 2), 0)
+        self.assertEqual(mul(-2, 2), -4)
 
     def test_divide(self): # 3 assertions
-        self.assertEqual(divide(4, 2), 2)
-        with self.assertRaises(ValueError):
-            divide(4, 0)
-        self.assertEqual(divide(0, 4), 0)
-        self.assertEqual(divide(-4, 2), -2)
+        self.assertEqual(div(4, 2), 2)
+        self.assertEqual(div(-4, 2), -2)
+        with self.assertRaises(ZeroDivisionError):
+            div(4, 0)
 
     ######## Partner 2
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            divide(0,5)
+            div(5,0)
 
     def test_logarithm(self):
         self.assertAlmostEqual(logarithm(2,8), 3)
@@ -54,11 +54,10 @@ class TestCalculator(unittest.TestCase):
             logarithm(10, 0)
         self.assertEqual(logarithm(10, 1), 0)
 
-
-     def test_hypotenuse(self): # 3 assertions
+    def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
 
-     def test_sqrt(self): # 3 assertions
+    def test_sqrt(self): # 3 assertions
         with self.assertRaises(ValueError):     # expects ValueError
             square_root(-1)
         self.assertEqual(square_root(1), 1)
