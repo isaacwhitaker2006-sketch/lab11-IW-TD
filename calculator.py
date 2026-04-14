@@ -1,11 +1,8 @@
 import math
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+#https://github.com/isaacwhitaker2006-sketch/lab11-IW-TD/edit/main/calculator.py
+# Partner 1: Isaac Whitaker
+# Partner 2: Trent Diano
 
-One function per operation, in order.
-"""
-# First example
 def square_root(a):
     try:
         if a < 0:
